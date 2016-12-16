@@ -5,19 +5,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Joints and Spring</title>
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="icon" type="image/jpg" href="../../images/profilepic.jpg" />
     <script src="TemplateData/UnityProgress.js"></script>
   </head>
-  <body class="template">
-    <p class="header"><span>Unity WebGL Player | </span>Joints and Spring</p>
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Joints and Spring</div>
-    </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+  <body class="template" style = "background: url(../../images/nav-bg.gif);">>
+	<div style="width: 60%; height: 2000px; background-color: #333333; position: relative; left: 21%;">
+		<p class="header"><span>Unity WebGL Player | </span>Joints and Spring</p>
+		<div class="template-wrap clear">
+		<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+		<br>
+		<div class="logo"></div>
+		<div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+		<div class="title">Joints and Spring</div>
+		</div>
+		<p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 268435456,
@@ -31,5 +32,20 @@
 </script>
 <script src="Release/UnityLoader.js"></script>
 
+	<h1 style="text-align: center; color: #e8e8e8;">Cloth Simulation</h1>
+	
+	<div style="height: 35%;"></div>
+	<h1 style="text-align: center; color: #e8e8e8;">About The Project:</h1>
+	<p style="color: #e8e8e8;">This project simulates real world cloth behavior in a virtual environment. In this simulation, we will treat the cloth as system of particles interconnected with spring-dampers. Each spring-damper connects two particles, and generates a force based on their positions and velocities. Each particle is also influenced by the force of gravity. With those three simple forces (gravity, spring and damping), we form the foundation of the cloth system. We then add some fancier forces such as aerodynamics.</p>
+	<br/>
+	<h1 style="text-align: center; color: #e8e8e8;">Controls:</h1>
+	<p style="color: #e8e8e8;"> This project uses the left and right mouse buttons during runtime.</p>
+	<li style="color: #e8e8e8;">Left Mouse Button: Used to interact with the ui sliders and the cloth object. Left clicking and holding onto a cloth particle will allow the user the move/drag the cloth particle in different directions. It is possible for the user to tear the selected cloth particle if moved far enough or forcefully away from the cloth object.</li>
+	<li style="color: #e8e8e8;">Right Mouse Button: Used to turn a cloth particle into an anchor point or to disable the anchor point flag on a cloth particle.</li>
+	<br/>
+	<a href="https://github.com/brockbarlow/Physics/tree/master/Tutorials/Joints%20and%20Spring"><h1 style="text-align: center; color: #e8e8e8;">Link To Repo</h1></a>
+	<br/>
+
+	</div>
   </body>
 </html>

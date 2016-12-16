@@ -5,19 +5,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Three Boid Rules</title>
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="icon" type="image/jpg" href="../../images/profilepic.jpg" />
     <script src="TemplateData/UnityProgress.js"></script>
   </head>
-  <body class="template">
-    <p class="header"><span>Unity WebGL Player | </span>Three Boid Rules</p>
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Three Boid Rules</div>
-    </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+  <body class="template" style = "background: url(../../images/nav-bg.gif);">
+	<div style="width: 60%; height: 2000px; background-color: #333333; position: relative; left: 21%;">
+		<p class="header"><span>Unity WebGL Player | </span>Three Boid Rules</p>
+		<div class="template-wrap" style = "top: 400px;">
+			<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+			<br>
+			<div class="logo"></div>
+			<div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+			<div class="title">Three Boid Rules</div>
+			</div>
+			<p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
     <script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 268435456,
@@ -31,5 +32,20 @@
 </script>
 <script src="Release/UnityLoader.js"></script>
 
+	<h1 style="text-align: center; color: #e8e8e8;">Boid Flock Behavior</h1>
+	
+	<div style="height: 35%;"></div>
+	<h1 style="text-align: center; color: #e8e8e8;">About The Project:</h1>
+	<p style="color: #e8e8e8;">This project simulates real world bird flocking behavior in a virtual environment. This project uses boid rules one to six: Cohesion, Dispersion, Alignment, Tendency, Velocity Limiting and Bounding Positions.</p>
+	<br/>
+	<h1 style="text-align: center; color: #e8e8e8;">Controls:</h1>
+	<p style="color: #e8e8e8;"> This project uses the left mouse buttons and the four arrow keys on the keyboard.</p>
+	<li style="color: #e8e8e8;">Left Mouse Button: Used to interact with the ui sliders.</li>
+	<li style="color: #e8e8e8;">Arrow Keys: The Up, Down, Left, and Right arrow keys will move the target object during runtime.</li>
+	<br/>
+	<a href="https://github.com/brockbarlow/Physics/tree/master/Tutorials/Three%20Boid%20Rules"><h1 style="text-align: center; color: #e8e8e8;">Link To Repo</h1></a>
+	<br/>
+
+	</div>
   </body>
 </html>
