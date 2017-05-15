@@ -12,7 +12,7 @@
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Builds.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
+  <body class="template" style = "background: url(../../images/nav-bg.gif);">
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -20,6 +20,38 @@
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
         <div class="title">Metallic_Clashers</div>
       </div>
-    </div>
+    
+	<h1 style ="text-align: center; color: #e8e8e8;">Metallic Clashers</h1>
+	
+	<div style="height: 35%;"></div>
+	<h1 style="text-align: center; color: #e8e8e8;">About The Project:</h1>
+	<br/>
+	<p style="color: #e8e8e8;">This project is a puzzle fighting game with rpg elements. The player has multiple levels to chose from that provide different enemy encounters.</p>
+	<br/>
+	
+	<h1 style="text-align: center; color: #e8e8e8;">About The Level Selection:</h1>
+	<br/>
+	<p style="color: #e8e8e8;">The levels are set up as a node system. The first level is unlocked at the start while all other levels are locked. In order to unlock new levels, you must win any unlocked levels currently available to you. Losing a level will not unlock any new levels. When selecting a level, information will be displayed to the player. The information consists of how many enemies the player will encounter and how much stamina it will take to enter the level. If the player does not have enough stamina to enter the level, they will need to wait until their stamina recharges.</p>
+	<br/>
+	
+	<h1 style="text-align: center; color: #e8e8e8;">About The Stamina System:</h1>
+	<br/>
+	<p style="color: #e8e8e8;">Stamina is used to enter levels. As long as the player has enough stamina, they will be able to enter the level. If not, the player will need to wait until their stamina is recharged. Stamina will recharge over time in real time.</p>
+	<br/>
+	
+	<h1 style="text-align: center; color: #e8e8e8;">About The Combat:</h1>
+	<br/>
+	<p style="color: #e8e8e8;">The combat screen of the game will display the players health and shield power, the gem grid and the enemies who will have their health and attack timers displayed. When combat starts, the player will be in attack mode. Making matches while in this mode will allow the player to attack the enemy currently targeted. In order to change which enemy is currently selected, click on another enemy to have attacks effect that enemy. While in defense mode, making matches will increase the amount of shield power the player currently has. The player can switch modes on the fly during combat. If the player defeats all enemies in the stage, the player will receive experience points and the next level is unlocked. While obtaining experience points, if the player levels up, all stats related to the player will be increased. If the player loses all of their health, combat will end and the player will need to retry the level again.</p>
+	<br/>
+	
+	<h1 style="text-align: center; color: #e8e8e8;"> Controls:</h1>
+	<br/>
+	<p style="color: #e8e8e8;">This web version of the project uses the left mouse button and mouse movement during runtime.</p>
+	<br/>
+	<li style="color: #e8e8e8;">Left Mouse Button: Used to interact with various ui elements and used to select which gem to interact with (must click on hold before moving a gem).</li>
+	<li style="color: #e8e8e8;">Mouse Movement: Used to move a gem while having a gem selected (can only move gems vertical or horizontal).</li>
+	<br/>
+	
+	</div>
   </body>
 </html>
