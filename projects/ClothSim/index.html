@@ -35,27 +35,37 @@
 	<h1 style="text-align: center; color: #e8e8e8;">Cloth Simulation</h1>
 	
 	<div style="height: 35%;"></div>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">About The Project:</h1>
 	<p style="color: #e8e8e8;">This project simulates real world cloth behavior in a virtual environment. In this simulation, we will treat the cloth as system of particles interconnected with spring-dampers. Each spring-damper connects two particles, and generates a force based on their positions and velocities. Each particle is also influenced by the force of gravity. With those three simple forces (gravity, spring and damping), we form the foundation of the cloth system. We then add some fancier forces such as aerodynamics.</p>
 	<br/>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">Information About The Particles:</h1>
 	<p style="color: #e8e8e8;">The particles are made up of various variables: position, velocity, acceleration, mass, momentum and force. Acceleration is calculated by dividing one by the mass then multiplying that result with the force value. This acceleration calculation is known as Newton’s Second Law (f=ma).</p>
 	<br/>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">How The Cloth Works:</h1>
 	<p style="color: #e8e8e8;">In order for the cloth simulation to work, we need to do two things: 1) Compute forces. For each particle we need to apply gravity. For each spring-damper we compute and apply forces. For each triangle we compute and apply aerodynamic forces. 2) Integrate Motion. For each particle we apply forward Euler integration.</p>
 	<br/>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">Information About Spring-Dampers:</h1>
 	<p style="color: #e8e8e8;">The basic spring-damper connects two particles and has three constants defining its behavior: Spring Constant which is labeled as ks, Damping Factor which is labeled as kd and Rest Length which is labeled as lo. The basic linear spring force in one dimension is: fspring = -ksx = -ks(lo - l). The linear damping force is: fdamp = -kdv = -kd(v1 - v2). We can define a spring-damper by just adding the two: fsd = -ks(lo - l) - kd(v1 - v2). To compute the forces in 3D: Turn 3D distances and velocities into 1D, compute spring force in 1D then turn 1D force back into 3D force. To find the spring-damper force, we start by computing the unit length vector e from r1 to r2. We can compute the distance l between the two points in the process. Next we find the 1D velocities. Then we can find the 1D force and map it back into 3D.</p>
 	<br/>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">Information About Aerodynamic Forces:</h1>
 	<p style="color: #e8e8e8;">In order to compute the aerodynamic forces, we need surfaces to apply it to. We will add some triangles to our cloth definition, where each triangle connects three particles. We will need to find the velocity, normal and area of the triangle to compute this force. For the velocity of the triangle, we can use the average of the three particle velocities. We actually want the relative velocity, so we will then subtract off the velocity of the air. The final aerodynamic force is assumed to apply to the entire triangle. We can turn this into a force on each particle by simply dividing by 3, and splitting the total force between them.</p>
 	<br/>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">Controls:</h1>
 	<p style="color: #e8e8e8;"> This project uses the left and right mouse buttons during runtime.</p>
 	<li style="color: #e8e8e8;">Left Mouse Button: Used to interact with the ui sliders and the cloth object. Left clicking and holding onto a cloth particle will allow the user the move/drag the cloth particle in different directions. It is possible for the user to tear the selected cloth particle if moved far enough or forcefully away from the cloth object.</li>
 	<li style="color: #e8e8e8;">Right Mouse Button: Used to turn a cloth particle into an anchor point or to disable the anchor point flag on a cloth particle.</li>
 	<br/>
+	
 	<a href="https://github.com/brockbarlow/Physics/tree/master/Tutorials/Joints%20and%20Spring"><h1 style="text-align: center; color: #e8e8e8;">Link To Repo</h1></a>
+	<br/>
+	
+	<a href="http://brockbarlow.github.io/brockbarlow/"><h1 style="text-align: center; color: #e8e8e8;">Back To Main Page</h1></a>
 	<br/>
 
 	</div>

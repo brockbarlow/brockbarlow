@@ -35,34 +35,47 @@
 	<h1 style="text-align: center; color: #e8e8e8;">Boid Flock Behavior</h1>
 	
 	<div style="height: 35%;"></div>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">About The Project:</h1>
+	
 	<p style="color: #e8e8e8;">This project simulates real world bird flocking behavior in a virtual environment. This project uses boid rules one to six: Cohesion, Dispersion, Alignment, Tendency, Velocity Limiting and Bounding Positions.</p>
 	<br/>
 	<h1 style="text-align: center; color: #e8e8e8;">Information About The Rules:</h1>
+	
 	<p style="color: #e8e8e8;">Boid Rule One - Cohesion:</p>
 	<li style="color: #e8e8e8;">Boids try to fly towards the center of mass of neighbouring boids. The center of mass is simply the average position of all the boids. Assume we have N boids called b1, b2, bn. The center of mass c of all N boids is given by: c = (b1.pos + b2.pos + …) / N (note: position are vectors, n is a scalar). The center of mass is a property of the entire flock; it is not something that would be considered by an individual boid. So we need to move the boid towards its perceived center, the center of all the other boids, not including itself. The perceived center is given by: pcj = (b1.pos + b2.pos + … + bj-1.pos + bj+1.pos + … + bn.pos) / (N-1). After this, we need to work out how to move the boid towards it. To move it 1% of the way towards the center this is given by (pcj - bj.pos) / 100. After this first rule, the first vector offset. V1, for the boid is calculated.</li>
 	<br/>
+	
 	<p style="color: #e8e8e8;">Boid Rule Two - Dispersion:</p>
 	<li style="color: #e8e8e8;">The purpose of this rule is to for boids to make sure they don’t collide into each other. To do this, each boid needs to be looked at and if it’s within a defined small distance (say 100 units) of another boid, move it as far away again as it already is. This is done by subtracting from a vector c the displacement of each boid which is near by. We initialise c to zero as we want this rule to give us a vector which when added to the current position moves a boid away from those near it.</li>
 	<br/>
+	
 	<p style="color: #e8e8e8;">Boid Rule Three - Alignment:</p>
 	<li style="color: #e8e8e8;">This rule is similar to rule one, however instead of averaging the positions of the other boids we average the velocities. We calculate a perceived velocity, pvj, then add a small portion to the boid’s current velocity.</li>
 	<br/>
+	
 	<p style="color: #e8e8e8;">Boid Rule Four - Tendency (Tendency towards a particular place):</p>
 	<li style="color: #e8e8e8;">An example of tendency: steering a sparse flock of sheep or cattle to a narrow gate. Upon reaching this point, the goal for a particular boid could be changed to encourage it to move away to make room for other members of the flock. Note that if the ‘gate’ is flanked by impenetrable objects as accounted for in rule two, then the flock will realistically mill around the gate and slowly trickle through it. Note that this rule moves the boid 1% of the way towards the goal at each step.</li>
 	<br/>
+	
 	<p style="color: #e8e8e8;">Boid Rule Five - Limiting The Speed:</p>
 	<li style="color: #e8e8e8;">Its a good idea to limit the magnitude of the boids’ velocities, this way they don’t go too fast. Without such limitations, their speed will actually fluctuate with a flocking-like tendency, and it is possible for them to momentarily go very fast.</li>
 	<br/>
+	
 	<p style="color: #e8e8e8;">Boid Rule Six - Bounding The Position:</p>
 	<li style="color: #e8e8e8;">In order to keep the flock within a certain area rather than unrealistically placing them within some confines and thus bouncing off invisible walls, we implement a rule which encourages them to stay within rough boundaries. That way they can fly out of them, but then slowly turn back, avoiding any harsh motions.</li>
 	<br/>
+	
 	<h1 style="text-align: center; color: #e8e8e8;">Controls:</h1>
 	<p style="color: #e8e8e8;"> This project uses the left mouse button and the four arrow keys on the keyboard.</p>
 	<li style="color: #e8e8e8;">Left Mouse Button: Used to interact with the ui sliders.</li>
 	<li style="color: #e8e8e8;">Arrow Keys: The Up, Down, Left, and Right arrow keys will move the target object during runtime.</li>
 	<br/>
+	
 	<a href="https://github.com/brockbarlow/Physics/tree/master/Tutorials/Three%20Boid%20Rules"><h1 style="text-align: center; color: #e8e8e8;">Link To Repo</h1></a>
+	<br/>
+	
+	<a href="http://brockbarlow.github.io/brockbarlow/"><h1 style="text-align: center; color: #e8e8e8;">Back To Main Page</h1></a>
 	<br/>
 
 	</div>
